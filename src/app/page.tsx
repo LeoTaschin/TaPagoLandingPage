@@ -32,9 +32,9 @@ export default function Home() {
               Transforme a maneira como você gerencia seus pagamentos com o TaPago, o aplicativo que torna suas transações financeiras mais simples, seguras e inteligentes.
             </p>
             <div className="flex gap-4 justify-center">
-              <button className="btn-primary flex items-center gap-2">
+              <a href="#solucao-moderna" className="btn-primary flex items-center gap-2">
                 Começar Agora <ArrowRightIcon className="w-5 h-5" />
-              </button>
+              </a>
               <button className="btn-secondary">
                 Saiba Mais
               </button>
@@ -348,7 +348,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-background2 py-20">
+      <section id="solucao-moderna" className="bg-background2 py-20">
         <div className="container text-center">
           <h2 className="text-3xl font-bold mb-6 text-text1">
             A <span className="text-primary">solução moderna</span> para um <span className="text-primary">problema antigo</span>

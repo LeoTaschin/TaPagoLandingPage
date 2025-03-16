@@ -26,7 +26,7 @@ export default function Header({ isDarkMode, toggleDarkMode }: HeaderProps) {
           <a href="#funcionalidades" className="hover:text-primary transition-colors">Funcionalidades</a>
           <a href="#depoimentos" className="hover:text-primary transition-colors">Depoimentos</a>
           <a href="#design" className="hover:text-primary transition-colors">Design</a>
-          <button className="btn-primary">Começar Agora</button>
+          <a href="#solucao-moderna" className="btn-primary">Começar Agora</a>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -91,12 +91,13 @@ export default function Header({ isDarkMode, toggleDarkMode }: HeaderProps) {
                 >
                   Design
                 </a>
-                <button
-                  className="btn-primary w-full"
+                <a
+                  href="#solucao-moderna"
+                  className="btn-primary w-full text-center"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Começar Agora
-                </button>
+                </a>
               </div>
             </nav>
           </div>
