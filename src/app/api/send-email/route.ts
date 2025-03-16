@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
+export const dynamic = "force-dynamic"; // Força a execução no servidor
+
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(request: Request) {
@@ -40,4 +42,4 @@ export async function POST(request: Request) {
       { status: 500 }
     )
   }
-} 
+}
