@@ -55,7 +55,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="bg-background2 p-6 rounded-xl shadow-lg dark:bg-background2"
+              className="bg-background2 p-6 rounded-xl shadow-custom-light dark:shadow-custom-dark"
             >
               <div className="bg-background p-3 rounded-lg w-fit mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -72,7 +72,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-background2 p-6 rounded-xl shadow-lg dark:bg-background2"
+              className="bg-background2 p-6 rounded-xl shadow-custom-light dark:shadow-custom-dark"
             >
               <div className="bg-background p-3 rounded-lg w-fit mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -89,7 +89,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="bg-background2 p-6 rounded-xl shadow-lg dark:bg-background2"
+              className="bg-background2 p-6 rounded-xl shadow-custom-light dark:shadow-custom-dark"
             >
               <div className="bg-background p-3 rounded-lg w-fit mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -106,7 +106,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="bg-background2 p-6 rounded-xl shadow-lg dark:bg-background2"
+              className="bg-background2 p-6 rounded-xl shadow-custom-light dark:shadow-custom-dark"
             >
               <div className="bg-background p-3 rounded-lg w-fit mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -135,7 +135,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="bg-cards p-6 rounded-xl shadow-sm"
+              className="bg-cards p-6 rounded-xl shadow-custom-light dark:shadow-custom-dark"
             >
               <p className="text-text2 font-light mb-4">
                 "O TaPago é incrível! Dividir contas com amigos ficou super fácil. Interface intuitiva e prática!"
@@ -157,7 +157,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-cards p-6 rounded-xl shadow-sm"
+              className="bg-cards p-6 rounded-xl shadow-custom-light dark:shadow-custom-dark"
             >
               <p className="text-text2 font-light mb-4">
                 "Melhor app para dividir despesas! Interface limpa e intuitiva!"
@@ -179,7 +179,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="bg-cards p-6 rounded-xl shadow-sm"
+              className="bg-cards p-6 rounded-xl shadow-custom-light dark:shadow-custom-dark"
             >
               <p className="text-text2 font-light mb-4">
                 "Perfeito para dividir contas da república! Prático, eficiente e todo mundo consegue ver o que deve!"
@@ -201,7 +201,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="bg-cards p-6 rounded-xl shadow-sm"
+              className="bg-cards p-6 rounded-xl shadow-custom-light dark:shadow-custom-dark"
             >
               <p className="text-text2 font-light mb-4">
                 "TaPago mudou a forma como dividimos as contas da viagem! Agora é tudo automático!"
@@ -223,7 +223,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="bg-cards p-6 rounded-xl shadow-sm"
+              className="bg-cards p-6 rounded-xl shadow-custom-light dark:shadow-custom-dark"
             >
               <p className="text-text2 font-light mb-4">
                 "Simplesmente fantástico! Uso para dividir as contas do apartamento e nunca mais tivemos problemas com pagamentos!"
@@ -245,7 +245,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="bg-cards p-6 rounded-xl shadow-sm"
+              className="bg-cards p-6 rounded-xl shadow-custom-light dark:shadow-custom-dark"
             >
               <p className="text-text2 font-light mb-4">
                 "Recomendo demais! Uso com minha família para dividir as contas mensais e ficou muito mais organizado!"

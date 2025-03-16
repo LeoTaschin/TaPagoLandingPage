@@ -17,7 +17,7 @@ export default function Header({ isDarkMode, toggleDarkMode }: HeaderProps) {
       <div className="container flex items-center justify-between">
         <a href="/" className="flex items-center gap-2">
           <Logo />
-          <span className="text-2xl font-bold">TaPago</span>
+          <span className="text-2xl font-light">TaPago</span>
         </a>
         
         {/* Desktop Navigation */}
@@ -104,12 +104,12 @@ export default function Header({ isDarkMode, toggleDarkMode }: HeaderProps) {
 
         <button
           onClick={toggleDarkMode}
-          className="p-2 rounded-lg hover:bg-gray-100"
+          className="p-2 rounded-lg hover:bg-background1"
         >
           {isDarkMode ? (
-            <SunIcon className="w-6 h-6 text-text1" />
+            <SunIcon className="w-6 h-6 text-text2" />
           ) : (
-            <MoonIcon className="w-6 h-6 text-text1" />
+            <MoonIcon className="w-6 h-6 text-text2" />
           )}
         </button>
       </div>

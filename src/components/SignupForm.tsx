@@ -76,7 +76,7 @@ export default function SignupForm({ children, className }: { children?: React.R
       transition={{ duration: 0.5 }}
       className={`w-full max-w-md mx-auto ${className}`}
     >
-      <form onSubmit={handleSubmit} className="bg-cards rounded-2xl shadow-xl p-8 space-y-6">
+      <form onSubmit={handleSubmit} className="bg-cards rounded-2xl shadow-custom-light dark:shadow-custom-dark p-8 space-y-6">
         <div className="space-y-6">
           {/* Nome */}
           <div className="relative">
