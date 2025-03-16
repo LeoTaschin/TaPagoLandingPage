@@ -32,10 +32,10 @@ export default function Header({ isDarkMode, toggleDarkMode }: HeaderProps) {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden p-2 rounded-lg hover:bg-gray-100"
+          className="md:hidden p-2 rounded-lg hover:bg-background2"
         >
           <svg
-            className="w-6 h-6 text-gray-600"
+            className="w-6 h-6 text-text1"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -60,33 +60,33 @@ export default function Header({ isDarkMode, toggleDarkMode }: HeaderProps) {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="absolute top-full left-0 right-0 bg-white shadow-lg md:hidden">
+          <div className="absolute top-full left-0 right-0 bg-background2 dark:bg-background2 shadow-lg md:hidden">
             <nav className="container py-4">
               <div className="flex flex-col space-y-4">
                 <a
                   href="#inicio"
-                  className="text-gray-600 hover:text-primary transition-colors"
+                  className="text-text1 hover:text-primary transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Início
                 </a>
                 <a
                   href="#funcionalidades"
-                  className="text-gray-600 hover:text-primary transition-colors"
+                  className="text-text1 hover:text-primary transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Funcionalidades
                 </a>
                 <a
                   href="#depoimentos"
-                  className="text-gray-600 hover:text-primary transition-colors"
+                  className="text-text1 hover:text-primary transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Depoimentos
                 </a>
                 <a
                   href="#design"
-                  className="text-gray-600 hover:text-primary transition-colors"
+                  className="text-text1 hover:text-primary transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Design
