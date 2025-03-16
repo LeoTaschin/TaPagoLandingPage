@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 import { NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
@@ -6,12 +8,14 @@ export const dynamic = "force-dynamic"; // Força a execução no servidor
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(request: Request) {
+  const receiverEmail = process.env.RECEIVER_EMAIL;
+
   try {
     const { name, email, age, phone, deviceType } = await request.json()
 
     const { data, error } = await resend.emails.send({
       from: 'TaPago <onboarding@resend.dev>',
-      to: process.env.DESTINATION_EMAIL || '',
+      to: 'leoctaschin@gmail.com',
       subject: 'Nova Inscrição TaPago',
       html: `
         <h2>Nova inscrição recebida!</h2>
