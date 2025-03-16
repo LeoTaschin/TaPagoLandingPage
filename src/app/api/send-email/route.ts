@@ -15,7 +15,7 @@ export async function POST(request: Request) {
 
     const { data, error } = await resend.emails.send({
       from: 'TaPago <onboarding@resend.dev>',
-      to: 'leoctaschin@gmail.com',
+      to: 'tapagoconfirmacao@gmail.com',
       subject: 'Nova Inscrição TaPago',
       html: `
         <h2>Nova inscrição recebida!</h2>

@@ -1,6 +1,6 @@
 const functions = require("firebase-functions");
 const {Resend} = require("resend");
-const resend = new Resend("re_BitCGhjP_F6uYAkRrHQXFdw2Z1G2gTF5K");
+const resend = new Resend("re_47JGTrvM_BZM6FtEkKLYn4DjJY2qAxLyT");
 
 exports.sendEmail = functions.https.onRequest(async (req, res) => {
   try {
@@ -8,7 +8,7 @@ exports.sendEmail = functions.https.onRequest(async (req, res) => {
 
     const {error} = await resend.emails.send({
       from: "TaPago <onboarding@resend.dev>",
-      to: "leoctaschin@gmail.com",
+      to: "tapagoconfirmacao@gmail.com",
       subject: "Nova Inscrição TaPago",
       html: `
         <h2>Nova inscrição recebida!</h2>

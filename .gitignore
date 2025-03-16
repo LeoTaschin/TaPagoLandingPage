@@ -64,3 +64,10 @@ node_modules/
 
 # dataconnect generated files
 .dataconnect
+
+# Next.js
+.next/
+out/
+build
+.vercel
+*.pem
