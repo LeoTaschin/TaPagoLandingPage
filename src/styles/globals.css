@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Você precisará dos arquivos de fonte corretos e das licenças apropriadas */
+/*
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/fonts/HelveticaNeue.woff2') format('woff2'),
+       url('/fonts/HelveticaNeue.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/fonts/HelveticaNeue-Bold.woff2') format('woff2'),
+       url('/fonts/HelveticaNeue-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+*/
+
+@layer base {
+  body {
+    @apply text-gray-900 bg-white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 text-white bg-primary rounded-lg hover:bg-primary/90 transition-colors;
+  }
+  .btn-secondary {
+    @apply px-6 py-3 text-primary border border-primary rounded-lg hover:bg-primary/10 transition-colors;
+  }
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+} 
