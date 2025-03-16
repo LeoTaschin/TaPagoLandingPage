@@ -35,9 +35,9 @@ export default function Home() {
               <a href="#solucao-moderna" className="btn-primary flex items-center gap-2">
                 Começar Agora <ArrowRightIcon className="w-5 h-5" />
               </a>
-              <button className="btn-secondary">
+              <a href="#funcionalidades" className="btn-secondary">
                 Saiba Mais
-              </button>
+              </a>
             </div>
           </motion.div>
         </div>
