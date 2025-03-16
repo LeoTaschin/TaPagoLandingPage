@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { PhoneIcon, EnvelopeIcon, UserIcon, DevicePhoneMobileIcon } from '@heroicons/react/24/outline'
 import { AnimatePresence } from 'framer-motion'
 
-export default function SignupForm() {
+export default function SignupForm({ children, className }: { children?: React.ReactNode; className?: string }) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -74,18 +74,18 @@ export default function SignupForm() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="w-full max-w-md mx-auto"
+      className={`w-full max-w-md mx-auto ${className}`}
     >
-      <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-xl p-8 space-y-6">
+      <form onSubmit={handleSubmit} className="bg-cards rounded-2xl shadow-xl p-8 space-y-6">
         <div className="space-y-6">
           {/* Nome */}
           <div className="relative">
-            <label htmlFor="name" className="text-sm font-medium text-gray-700 mb-1 block">
+            <label htmlFor="name" className="text-sm font-medium text-text1 mb-1 block">
               Nome Completo
             </label>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <UserIcon className="h-5 w-5 text-gray-400" />
+                <UserIcon className="h-5 w-5 text-text2" />
               </div>
               <input
                 type="text"
@@ -94,7 +94,7 @@ export default function SignupForm() {
                 required
                 value={formData.name}
                 onChange={handleChange}
-                className="block w-full pl-10 pr-3 py-2.5 border border-gray-300 rounded-xl shadow-sm focus:ring-2 focus:ring-primary focus:border-transparent bg-gray-50 transition-colors"
+                className="block w-full pl-10 pr-3 py-2.5 border border-gray-300 rounded-xl shadow-sm focus:ring-2 focus:ring-primary focus:border-transparent bg-background2 dark:bg-background2 text-text1 dark:text-text1 transition-colors"
                 placeholder="Digite seu nome"
               />
             </div>
@@ -102,12 +102,12 @@ export default function SignupForm() {
 
           {/* Email */}
           <div className="relative">
-            <label htmlFor="email" className="text-sm font-medium text-gray-700 mb-1 block">
+            <label htmlFor="email" className="text-sm font-medium text-text1 mb-1 block">
               Email
             </label>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <EnvelopeIcon className="h-5 w-5 text-gray-400" />
+                <EnvelopeIcon className="h-5 w-5 text-text2" />
               </div>
               <input
                 type="email"
@@ -116,7 +116,7 @@ export default function SignupForm() {
                 required
                 value={formData.email}
                 onChange={handleChange}
-                className="block w-full pl-10 pr-3 py-2.5 border border-gray-300 rounded-xl shadow-sm focus:ring-2 focus:ring-primary focus:border-transparent bg-gray-50 transition-colors"
+                className="block w-full pl-10 pr-3 py-2.5 border border-gray-300 rounded-xl shadow-sm focus:ring-2 focus:ring-primary focus:border-transparent bg-background2 dark:bg-background2 text-text1 dark:text-text1 transition-colors"
                 placeholder="seu@email.com"
               />
             </div>
@@ -125,7 +125,7 @@ export default function SignupForm() {
           {/* Idade e Telefone na mesma linha */}
           <div className="grid grid-cols-2 gap-4">
             <div className="relative">
-              <label htmlFor="age" className="text-sm font-medium text-gray-700 mb-1 block">
+              <label htmlFor="age" className="text-sm font-medium text-text1 mb-1 block">
                 Idade
               </label>
               <input
@@ -137,18 +137,18 @@ export default function SignupForm() {
                 max="120"
                 value={formData.age}
                 onChange={handleChange}
-                className="block w-full px-3 py-2.5 border border-gray-300 rounded-xl shadow-sm focus:ring-2 focus:ring-primary focus:border-transparent bg-gray-50 transition-colors"
+                className="block w-full px-3 py-2.5 border border-gray-300 rounded-xl shadow-sm focus:ring-2 focus:ring-primary focus:border-transparent bg-background2 dark:bg-background2 text-text1 dark:text-text1 transition-colors"
                 placeholder="18+"
               />
             </div>
 
             <div className="relative">
-              <label htmlFor="phone" className="text-sm font-medium text-gray-700 mb-1 block">
+              <label htmlFor="phone" className="text-sm font-medium text-text1 mb-1 block">
                 Telefone
               </label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <PhoneIcon className="h-5 w-5 text-gray-400" />
+                  <PhoneIcon className="h-5 w-5 text-text2" />
                 </div>
                 <input
                   type="tel"
@@ -157,7 +157,7 @@ export default function SignupForm() {
                   required
                   value={formData.phone}
                   onChange={handleChange}
-                  className="block w-full pl-10 pr-3 py-2.5 border border-gray-300 rounded-xl shadow-sm focus:ring-2 focus:ring-primary focus:border-transparent bg-gray-50 transition-colors"
+                  className="block w-full pl-10 pr-3 py-2.5 border border-gray-300 rounded-xl shadow-sm focus:ring-2 focus:ring-primary focus:border-transparent bg-background2 dark:bg-background2 text-text1 dark:text-text1 transition-colors"
                   placeholder="(00) 00000-0000"
                 />
               </div>
@@ -166,12 +166,12 @@ export default function SignupForm() {
 
           {/* Tipo de Dispositivo */}
           <div className="relative">
-            <label htmlFor="deviceType" className="text-sm font-medium text-gray-700 mb-1 block">
+            <label htmlFor="deviceType" className="text-sm font-medium text-text1 mb-1 block">
               Tipo de Dispositivo
             </label>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <DevicePhoneMobileIcon className="h-5 w-5 text-gray-400" />
+                <DevicePhoneMobileIcon className="h-5 w-5 text-text2" />
               </div>
               <select
                 id="deviceType"
@@ -179,13 +179,13 @@ export default function SignupForm() {
                 required
                 value={formData.deviceType}
                 onChange={handleChange}
-                className="block w-full pl-10 pr-3 py-2.5 border border-gray-300 rounded-xl shadow-sm focus:ring-2 focus:ring-primary focus:border-transparent bg-gray-50 transition-colors appearance-none"
+                className="block w-full pl-10 pr-3 py-2.5 border border-gray-300 rounded-xl shadow-sm focus:ring-2 focus:ring-primary focus:border-transparent bg-background2 dark:bg-background2 text-text1 dark:text-text1 transition-colors appearance-none"
               >
                 <option value="Apple">Apple (iOS)</option>
                 <option value="Android">Android</option>
               </select>
               <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                <svg className="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+                <svg className="h-5 w-5 text-text2" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
               </div>
@@ -222,10 +222,10 @@ export default function SignupForm() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              className="mt-4 p-4 bg-green-50 rounded-xl border border-green-100"
+              className="mt-4 p-4 bg-green-50 dark:bg-green-900 rounded-xl border border-green-100 dark:border-green-800"
             >
-              <p className="text-sm text-green-700 flex items-center">
-                <svg className="h-5 w-5 text-green-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <p className="text-sm text-green-700 dark:text-green-300 flex items-center">
+                <svg className="h-5 w-5 text-green-400 dark:text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                 </svg>
                 Formulário enviado com sucesso! Entraremos em contato em breve.
@@ -238,10 +238,10 @@ export default function SignupForm() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              className="mt-4 p-4 bg-red-50 rounded-xl border border-red-100"
+              className="mt-4 p-4 bg-red-50 dark:bg-red-900 rounded-xl border border-red-100 dark:border-red-800"
             >
-              <p className="text-sm text-red-700 flex items-center">
-                <svg className="h-5 w-5 text-red-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <p className="text-sm text-red-700 dark:text-red-300 flex items-center">
+                <svg className="h-5 w-5 text-red-400 dark:text-red-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 {status.error}
@@ -250,6 +250,7 @@ export default function SignupForm() {
           )}
         </AnimatePresence>
       </form>
+      {children}
     </motion.div>
   )
 } 

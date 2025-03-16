@@ -2,6 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-primary: #00B907;
+  --color-background: #FFFFFF;
+  --color-background2: #EFF0F3;
+  --color-cards: #FFFFFF;
+  --color-text1: #000000;
+  --color-text2: #616161;
+}
+
+.dark {
+  --color-primary: #00B907;
+  --color-background: #121212;
+  --color-background2: #212121;
+  --color-cards: #121212;
+  --color-text1: #FFFFFF;
+  --color-text2: #E0E0E0;
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-background {
+  background-color: var(--color-background);
+}
+
+.bg-background2 {
+  background-color: var(--color-background2);
+}
+
+.bg-cards {
+  background-color: var(--color-cards);
+}
+
+.text-text1 {
+  color: var(--color-text1);
+}
+
+.text-text2 {
+  color: var(--color-text2);
+}
+
 /* Você precisará dos arquivos de fonte corretos e das licenças apropriadas */
 /*
 @font-face {
