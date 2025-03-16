@@ -29,22 +29,8 @@ export default function Header({ isDarkMode, toggleDarkMode }: HeaderProps) {
 
   return (
     <header className="bg-background py-4 fixed w-full top-0 z-50 shadow-custom-light dark:shadow-custom-dark text-text1">
-      <div className="container flex items-center justify-between">
-        <a href="/" className="flex items-center gap-2">
-          <Logo />
-          <span className="text-2xl font-light">TaPago</span>
-        </a>
-        
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
-          <a href="#inicio" onClick={(e) => scrollToSection(e, 'inicio')} className="hover:text-primary transition-colors">Início</a>
-          <a href="#funcionalidades" onClick={(e) => scrollToSection(e, 'funcionalidades')} className="hover:text-primary transition-colors">Funcionalidades</a>
-          <a href="#depoimentos" onClick={(e) => scrollToSection(e, 'depoimentos')} className="hover:text-primary transition-colors">Depoimentos</a>
-          <a href="#design" onClick={(e) => scrollToSection(e, 'design')} className="hover:text-primary transition-colors">Design</a>
-          <a href="#solucao-moderna" onClick={(e) => scrollToSection(e, 'solucao-moderna')} className="btn-primary">Começar Agora</a>
-        </nav>
-
-        {/* Mobile Menu Button */}
+      <div className="container flex items-center justify-between relative">
+        {/* Mobile Menu Button - Left */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="md:hidden p-2 rounded-lg hover:bg-background2"
@@ -72,6 +58,21 @@ export default function Header({ isDarkMode, toggleDarkMode }: HeaderProps) {
             )}
           </svg>
         </button>
+
+        {/* Logo - Centered on mobile */}
+        <a href="/" className="absolute left-1/2 transform -translate-x-1/2 md:static md:transform-none flex items-center gap-2">
+          <Logo />
+          <span className="text-2xl font-light">TaPago</span>
+        </a>
+        
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center gap-8">
+          <a href="#inicio" onClick={(e) => scrollToSection(e, 'inicio')} className="hover:text-primary transition-colors">Início</a>
+          <a href="#funcionalidades" onClick={(e) => scrollToSection(e, 'funcionalidades')} className="hover:text-primary transition-colors">Funcionalidades</a>
+          <a href="#depoimentos" onClick={(e) => scrollToSection(e, 'depoimentos')} className="hover:text-primary transition-colors">Depoimentos</a>
+          <a href="#design" onClick={(e) => scrollToSection(e, 'design')} className="hover:text-primary transition-colors">Design</a>
+          <a href="#solucao-moderna" onClick={(e) => scrollToSection(e, 'solucao-moderna')} className="btn-primary">Começar Agora</a>
+        </nav>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
@@ -133,6 +134,7 @@ export default function Header({ isDarkMode, toggleDarkMode }: HeaderProps) {
           </div>
         )}
 
+        {/* Dark Mode Toggle - Right */}
         <button
           onClick={toggleDarkMode}
           className="p-2 rounded-lg hover:bg-background1"
