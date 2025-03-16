@@ -20,6 +20,11 @@
   --color-text2: #E0E0E0;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
 .bg-primary {
   background-color: var(--color-primary);
 }
