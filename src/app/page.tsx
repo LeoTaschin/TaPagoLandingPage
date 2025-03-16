@@ -8,6 +8,21 @@ import Logo from '@/components/Logo'
 import { useState } from 'react'
 import '@/styles/globals.css'
 
+const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+  e.preventDefault();
+  const element = document.getElementById(sectionId);
+  if (element) {
+    const headerOffset = 80; // Adjust this value based on your header height
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth"
+    });
+  }
+};
+
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false)
   const toggleDarkMode = () => setIsDarkMode(!isDarkMode)
@@ -32,10 +47,10 @@ export default function Home() {
               Transforme a maneira como você gerencia seus pagamentos com o TaPago, o aplicativo que torna suas transações financeiras mais simples, seguras e inteligentes.
             </p>
             <div className="flex gap-4 justify-center">
-              <a href="#solucao-moderna" className="btn-primary flex items-center gap-2">
+              <a href="#solucao-moderna" onClick={(e) => scrollToSection(e, 'solucao-moderna')} className="btn-primary flex items-center gap-2">
                 Começar Agora <ArrowRightIcon className="w-5 h-5" />
               </a>
-              <a href="#funcionalidades" className="btn-secondary">
+              <a href="#funcionalidades" onClick={(e) => scrollToSection(e, 'funcionalidades')} className="btn-secondary">
                 Saiba Mais
               </a>
             </div>
