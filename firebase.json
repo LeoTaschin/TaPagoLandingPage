@@ -10,6 +10,10 @@
       {
         "source": "/api/**",
         "function": "sendEmail"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
       }
     ]
   },
